@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/main.css">
+    <title>Site legal</title>
+</head>
+
+<body>
+    <header>
+        <svg>
+            <rect y="7" width="22" height="2"></rect>
+            <rect y="14" width="22" height="2"></rect>
+            <rect width="22" height="2"></rect>
+        </svg>
+        <label>NETFILMES</label>
+    </header>
+    <main>
+        <div id="poster">
+            <img src="https://image.tmdb.org/t/p/original/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg">
+            <div id="posterside">
+                <div id="posterdesc">
+                    <h1>Interestellar (2014)</h1>
+                    <div>Após ver a Terra consumindo boa parte de suas reservas naturais, um grupo de astronautas recebe
+                        a missão de verificar possíveis planetas para receberem a população mundial, possibilitando a
+                        continuação da espécie. Cooper (Matthew McConaughey) é chamado para liderar o grupo e aceita a
+                        missão sabendo que pode nunca mais ver os filhos. Ao lado de Brand (Anne Hathaway), Jenkins
+                        (Marlon Sanders) e Doyle (Wes Bentley), ele seguirá em busca de uma nova casa. Com o passar dos
+                        anos, sua filha Murph (Mackenzie Foy e Jessica Chastain) investirá numa própria jornada para
+                        também tentar salvar a população do planeta.</div>
+                </div>
+            </div>
+        </div>
+        <div id="filmes">
+            {%for movie in data:%}
+        <div class="filme">
+            <h2>{{movie['name']}}</h2>
+        </div>
+        {% endfor %}
+        </div>
+    </main>
+</body>
+
+</html>
